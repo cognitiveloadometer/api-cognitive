@@ -11,8 +11,8 @@ const port = 3030
 app.use(express.json())
 
 app.use("/users", cors(), usersRoutes)
-app.use("/teams", teamsRoutes)
-app.use("/cognitiveloadmeter", cognitiveRoutes)
+app.use("/teams", cors(), teamsRoutes)
+app.use("/cognitiveloadmeter", cors(), cognitiveRoutes)
 
 app.listen(port, () => {
     console.log(`Server is running on port: ${port}`)
